@@ -1,0 +1,19 @@
+{
+  "name": "shand",
+  "version": "1.0.0",
+  "description": "gurt second hend ",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedorvlad/FWD_09_K2.git"
+  },
+  "author": "volodymyr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedorvlad/FWD_09_K2/issues"
+  },
+  "homepage": "https://github.com/fedorvlad/FWD_09_K2#readme"
+}
