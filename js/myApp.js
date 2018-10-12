@@ -47,16 +47,29 @@ var galeryHtml = '';
 
 galeryData.forEach(function(item) {
     galeryHtml = galeryHtml + 
-    '<div class="col-12 col-md-4">' +
+    '<div class="col-12 col-sm-4 col-lg-2">' +
     '<div class="card animated fadeIn m-3">' +
     '<img class="card-img-top" src="' + item['img'] + '" alt="Card image cap">' +
     '<div class="card-body">' +
-    '<h4 class="card-title text-capitalize"><a>' + item['title'] + '</a></h4>' +
+    '<h3 class="card-title text-capitalize text-center"><a>' + item['title'] + '</a></h3>' +
     '<p class="card-text">' + item['text'] + '</p>' +
-      '<a href="#" class="btn btn-primary">Button</a>' +
     '</div>' +
   '</div>' +
   '</div>';
 });
 
 rootGalery.innerHTML = galeryHtml;
+
+// Start using JQuery
+$(document).ready(function(){
+    const cards = $('#root-galery-id .card');
+
+    var maxHeight = 0;
+    cards.each(function(){
+        if ( maxHeight < $(this).height() ) {
+            maxHeight = $(this).height();
+        }
+    });
+    cards.height(maxHeight);
+
+});
