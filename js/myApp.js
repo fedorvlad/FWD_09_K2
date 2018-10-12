@@ -70,5 +70,5 @@ $(document).ready(function(){
             maxHeight = $(this).height();
         }
     });
-    cards.height(maxHeight);
+    // cards.height(maxHeight);
 });
