@@ -1,4 +1,5 @@
 var rootGalery = document.getElementById('root-galery-id');
+const serverURL = 'https://fedorvlad.github.io/FWD_09_K2/';
 var galeryData = [
     {
         img: 'img/galery/tovar/1.png',
@@ -62,6 +63,15 @@ rootGalery.innerHTML = galeryHtml;
 
 // Start using JQuery
 $(document).ready(function(){
+
+    $.get(serverURL + 'data/galery.json',
+     function(data, status){
+        console.log("Data: " + data + "\nStatus: " + status);
+        if ( ! $.isEmptyObject(data) && Array.isArray(data) ) {
+            console.log('array full');
+        }
+    });
+
     const cards = $('#root-galery-id .card');
 
     var maxHeight = 0;
