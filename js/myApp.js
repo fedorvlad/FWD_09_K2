@@ -6,6 +6,7 @@ var galeryHtml = '';
 $(document).ready(function(){
 
     $('#header-for-all-website-id').load(serverURL + 'data/header.html');
+    $('#footer-for-all-website-id').load(serverURL + 'data/footer.html');
 
     $.get(serverURL + 'data/galery.json',
      function(data, status){
