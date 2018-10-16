@@ -1,10 +1,11 @@
 var rootGalery = document.getElementById('root-galery-id');
 const serverURL = 'https://fedorvlad.github.io/FWD_09_K2/';
-
 var galeryHtml = '';
 
 // Start using JQuery
 $(document).ready(function(){
+
+    $('#header-for-all-website-id').load(serverURL + 'data/header.html');
 
     $.get(serverURL + 'data/galery.json',
      function(data, status){
